@@ -21,6 +21,7 @@ Circulo::Circulo(float r, float x, float y ) {
         _yc = y;
     }else{
         cout << "No puede crear círculos de radio 0.";
+        _radio = _xc = _yc = 0.;
     }
 
 }

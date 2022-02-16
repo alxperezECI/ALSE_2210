@@ -12,24 +12,24 @@ int main(){
     a.setRadio( 7. );
     cout << a << endl;
 
-    Circulo b(3., 10., 0.);
+    Circulo b(3., 10.5, 0.);
     cout << b << endl;
 
     cout << "Estos círculos " << ( a.intersectan(b) ? "si ": "no " ) << "se intersectan" << endl;
 	
     Cuadrado c(9.5);
-	cout << c << endl;
+    cout << c << endl;
     c.setLado( 17. );
     cout << c << endl;
 	
-	Triangulo t( 6.5, 7.9 );
-	cout << t << endl;
-	t.setBase( 88. );
-	t.setAltura( 10. );
-	cout << t << endl;
+    Triangulo t( 6.5, 7.9 );
+    cout << t << endl;
+    t.setBase( 88. );
+    t.setAltura( 10. );
+    cout << t << endl;
 	
-	Pentagono p( 9.5 );
-	cout << p << endl;
+    Pentagono p( 9.5 );
+    cout << p << endl;
     p.setLado( 17. );
     cout << p << endl;
 	
