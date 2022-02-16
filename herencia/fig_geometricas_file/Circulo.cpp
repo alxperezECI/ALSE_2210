@@ -1,10 +1,5 @@
-/**
- * Project Untitled
- */
-
-
 #include "Circulo.h"
-#include <math.h>
+#include <cmath>
 
 Circulo::Circulo(float r, float x, float y) {
     _radio = r;

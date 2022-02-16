@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _GEOMETRICA_H
 #define _GEOMETRICA_H
