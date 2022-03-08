@@ -1,4 +1,3 @@
-
 #ifndef _GEOMETRICA_H
 #define _GEOMETRICA_H
 #include <iostream>
@@ -22,7 +21,7 @@ public:
 
     virtual string queSoy();
 
-    //virtual bool intersecta(Geometrica& g);
+    virtual Geometrica* Englobante(Geometrica *g);
 
     friend ostream& operator<<(ostream& stream, Geometrica& g);
 

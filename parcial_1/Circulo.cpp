@@ -1,5 +1,6 @@
 #include "Circulo.h"
 #include <cmath>
+#include "Geometrica.h"
 
 Circulo::Circulo(float r, float x, float y) {
     _radio = r;
@@ -30,7 +31,11 @@ Circulo::Circulo(string parametros){
 }
 
 Circulo::Circulo() {
-
+    _radio = 0.;
+    _xc = 0. ;
+    _yc = 0.;
+    _idTipo =  circulo ;
+    _area = _perimetro = 0.;
 }
 
 float Circulo::area(){
@@ -50,3 +55,4 @@ ostream& operator<<(ostream& stream, Circulo& c){
    stream << "Yo soy un círculo" ;
    return stream;
 }
+
