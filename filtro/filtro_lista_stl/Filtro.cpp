@@ -27,7 +27,8 @@ bool Filtro::agregarDato(float a) {
  * @return float
  */
 float Filtro::promedio() {
-	// Escribir el código para calcular el promedio de los datos de la lista
+    float prom;
+    // Escribir el código para calcular el promedio de los datos de la lista
 
     return prom;
 }
