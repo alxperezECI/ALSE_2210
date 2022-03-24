@@ -568,7 +568,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox">
+          <widget class="QComboBox" name="cmb_Operacion">
            <item>
             <property name="text">
              <string>+</string>

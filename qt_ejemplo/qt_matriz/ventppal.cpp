@@ -1,6 +1,8 @@
 #include "ventppal.h"
 #include "./ui_ventppal.h"
-#include <string>
+#include <eigen3/Eigen/Dense>
+
+using Eigen::MatrixXd;
 
 VentPPal::VentPPal(QWidget *parent)
     : QMainWindow(parent)
@@ -14,21 +16,25 @@ VentPPal::~VentPPal()
     delete ui;
 }
 
-/*
- *
-int main()
-{
-  MatrixXd m(2,2);
-  m(0,0) = 3;
-  m(1,0) = 2.5;
-  m(0,1) = -1;
-  m(1,1) = m(1,0) + m(0,1);
-  std::cout << m << std::endl;
-}
-*/
 void VentPPal::on_pushButton_clicked()
 {
-    QString a = ui->txt_M1_11->text();
-    ui->txt_MR_11->setText("Hola Alse");
-    ui->txt_MR_11->insert( a  );
+    MatrixXd m1(2,2), m2(2,2), mr(2,2);
+    m1(0,0)= ui->txt_M1_11->text().toDouble(); // Completar la lectura de las dos matrices
+
+    switch ( ui->cmb_Operacion->currentIndex() ){ // De qué otra forma se puede saber cuál operación realizar?
+    case 0: // Sería la suma
+        mr = m1 + m2;
+        break;
+    case 1: // Sería la resta
+        mr = m1 - m2;
+        break;
+    case 2: // Sería la multiplicación
+        mr = m1 * m2;
+        break;
+    case 3: // Sería la división
+        mr = m1 * m2.inverse();
+     }
+
+    ui->txt_MR_11->setText( QString::number( mr(0,0) ) ); // Completar la escritura del resultado
+
 }
