@@ -23,6 +23,9 @@ add_executable(qt_matriz
   ventppal.cpp
   ventppal.h
   ventppal.ui
+  dia_escalar.cpp
+  dia_escalar.h
+  dia_escalar.ui
 )
 
 target_link_libraries(qt_matriz PRIVATE Qt5::Widgets Eigen3::Eigen)

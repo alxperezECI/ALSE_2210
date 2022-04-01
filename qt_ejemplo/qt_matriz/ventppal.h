@@ -17,8 +17,11 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void recibeEscalar(int tipo, double esc);
 
 private:
     Ui::VentPPal *ui;
+    int      _tipo;
+    double   _escalar;
 };
 #endif // VENTPPAL_H

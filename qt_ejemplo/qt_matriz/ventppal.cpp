@@ -1,6 +1,8 @@
 #include "ventppal.h"
 #include "./ui_ventppal.h"
 #include <eigen3/Eigen/Dense>
+#include <iostream>
+#include <dia_escalar.h>
 
 using Eigen::MatrixXd;
 
@@ -32,9 +34,19 @@ void VentPPal::on_pushButton_clicked()
         mr = m1 * m2;
         break;
     case 3: // Sería la división
+        Dia_escalar aux(this);
+        aux.show();
+        aux.exec();
         mr = m1 * m2.inverse();
      }
 
     ui->txt_MR_11->setText( QString::number( mr(0,0) ) ); // Completar la escritura del resultado
+
+}
+
+void VentPPal::recibeEscalar(int tipo, double esc){
+    std::cout << "Dentro del slot" << std::endl;
+    _tipo = tipo;
+    _escalar = esc;
 
 }
