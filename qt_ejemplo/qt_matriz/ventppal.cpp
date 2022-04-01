@@ -35,6 +35,7 @@ void VentPPal::on_pushButton_clicked()
         break;
     case 3: // Sería la división
         Dia_escalar aux(this);
+        connect( &aux,SIGNAL(envioEscalar), this, SLOT(recibeEscalar) );
         aux.show();
         aux.exec();
         mr = m1 * m2.inverse();
