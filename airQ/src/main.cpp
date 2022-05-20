@@ -41,6 +41,14 @@ int main(){
 
         if( contador % 21 ){
             // Calcular promedios e imprimir
+			int i = 0;
+			Sensor temp(3);
+			for(i =0; i< _nvec.size(); i++){
+				temp.acumularEn( 0, _nvec[i].NiO() );
+				temp.acumularEn( 1, _nvec[i].NiO2() );
+			}
+			temp.promediarEntre( 0, _nvec.size() );
+			temp.promediarEntre( 1, _nvec.size() );
 
             contador = 1;
             _nvec.clear();
